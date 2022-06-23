@@ -3,7 +3,6 @@ import campMap from "/campingSpots.svg";
 
 function CampInfo({ formData, setFormData, checkboxLabels }) {
   const [areaIsChecked, setAreaIsChecked] = useState([]);
-  const [allcampsites, setallCampsites] = useState([]);
 
   useEffect(() => {
     let campsites = [
@@ -70,7 +69,6 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
           <map name="image-map">
             <area
               alt="Helheim"
-              id={0}
               value="Helheim"
               title="Helheim"
               onClick={(e) => {
@@ -94,17 +92,16 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
                   })
                 );
               }}
-              coords="80,242,77,201,81,176,92,150,103,120,134,79,163,65,188,58,161,38,125,30,109,30,89,27,76,34,62,41,49,50,32,63,24,74,16,95,3,126,4,160,15,184,30,209,46,226,62,236"
+              coords="80,242,77,201,81,176,92,150,103,120,134,79,163,65,188,58,161,38,125,30,
+              109,30,89,27,76,34,62,41,49,50,32,63,24,74,16,95,3,126,4,160,15,184,30,209,46,226,62,236"
               shape="poly"
             ></area>
 
             <area
               alt="Svartheim"
-              id={1}
               value="Svartheim"
               title="Svartheim"
               onClick={(e) => {
-                e.target.fill = "#000000";
                 setFormData({ ...formData, campsite: e.target.title });
                 setAreaIsChecked(
                   areaIsChecked.map((data) => {
@@ -131,7 +128,6 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
 
             <area
               alt="Nilfheim"
-              id={1}
               value="Nilfheim"
               title="Nilfheim"
               onClick={(e) => {
@@ -160,7 +156,6 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
 
             <area
               alt="Muspelheim"
-              id={1}
               value="Muspelheim"
               title="Muspelheim"
               onClick={(e) => {
@@ -189,7 +184,6 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
 
             <area
               alt="Alfheim"
-              id={1}
               value="Alfheim"
               title="Alfheim"
               onClick={(e) => {
@@ -216,6 +210,8 @@ function CampInfo({ formData, setFormData, checkboxLabels }) {
               shape="poly"
             ></area>
           </map>
+
+          
         </div>
       </div>
     </div>
